@@ -1,35 +1,28 @@
 ﻿using System;
 
-namespace RealCalculator
+namespace AverageNumber
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the 2 numbers:");
-            string firstNum = Console.ReadLine();
-            string secondNum = Console.ReadLine();
-            int fNum = int.Parse(firstNum);
-            int sNum = int.Parse(secondNum);
-            Console.WriteLine("Enter the operator");
-            string enterOperator = Console.ReadLine();
-            if (enterOperator == "+" )
+            Console.WriteLine("Please enter four Numbers:");
+            string firstNumber = Console.ReadLine();
+            string secondNumber = Console.ReadLine();
+            string thirdNumber = Console.ReadLine();
+            string fourthNumber = Console.ReadLine();
+            int fNum = int.Parse(firstNumber);
+            int secNum = int.Parse(secondNumber);
+            int tNum = int.Parse(thirdNumber);
+            int foNum = int.Parse(fourthNumber);
+            Console.WriteLine("The Average of Numbers is:");
+            int rezult =(fNum + secNum + tNum + foNum / 4);
+            Console.WriteLine(rezult);
+            if(fNum == 0 && secNum == 0 && tNum == 0 && foNum == 0 )
             {
-                Console.WriteLine(fNum + sNum);
-            } else if (enterOperator == "-" )
-            {
-                Console.WriteLine(fNum - sNum);
-            } else if(enterOperator == "*")
-            {
-                Console.WriteLine(fNum * sNum);
-            } else if ( enterOperator ==  "/")
-            {
-                Console.WriteLine(fNum / sNum);
-            } else
-            {
-                Console.WriteLine("Invalid Operator");
+                Console.WriteLine("Error, Cannot calculate the average of 0");
             }
-                
+
         }
     }
 }
